@@ -568,7 +568,7 @@ h2 {
     background-color: var(--white);
     color: grey;
   }
-
+}
 
 @media (min-width: 900px){
   [id*="Kurse"] {
