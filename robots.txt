@@ -1,0 +1,10 @@
+# robots.txt – Steuerdatei für Suchmaschinen-Crawler
+# Mehr Infos: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+User-agent: *
+Disallow:
+
+# → Alle Crawler dürfen alle Seiten besuchen (kein „Disallow“).
+
+# Lage der XML-Sitemap (bitte Domain anpassen!)
+Sitemap: https://www.deineseite.de/sitemap.xml

@@ -1,0 +1,596 @@
+:root {
+  --variante: hsl(239, 97%, 26%);
+  --variante2: hsl(13, 79%, 43%);
+  --white: #fff;
+  --rosa: hsl(340, 100%, 50%);
+  --light: hsl(345, 2%, 85%);
+  --leuchtRot: hsl(359, 97%, 26%); 
+  --kräftigGrün: hsl(119, 97%, 26%);
+  --violet: hsl(260, 90%, 40%);
+  --gelbgrün: hsl(59, 97%, 50%); 
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.Logo {
+  width: 90px;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+#appear {
+  color: var(--white);
+  position: absolute;
+  height: 100%;
+  right: 5%;
+  top: 35%;
+}
+
+.navbar>i {
+  position: absolute;
+  top: 5%;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar {
+  position: relative;
+  grid-area: header;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: none;
+  background-color: var(--variante);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  background-color: var(--variante2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  list-style: none; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links.hidden {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links a[aria-current="page"] {
+  background-color: white;
+  color: var(--variante);
+  /* ou une couleur vive */
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/************************* FOOTER ***************************/
+
+footer {
+  background-color: var(--variante);
+  grid-area: footer;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer .fontawesome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--white);
+  background-color: var(--variante);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.fontawesome a {
+  font-size: 37px;
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-text {
+  color: #fff;
+  text-align: center;
+}
+
+/************************************************* INSTRUMENT ***********************************/
+
+
+#UseInstrument {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "section section"
+    "aside aside"
+    "article article"
+    "tickets tickets"
+    "footer footer";
+}
+
+#UseInstrument header {
+  grid-area: header;
+}
+
+.Kinder {
+  margin-left: 5%;
+  width: 90%;
+  height: 85%;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#introduction {
+  grid-area: section;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: cornflowerblue;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: var(--white);
+}
+
+#introduction #Text {
+  color: var(--white);
+  background-color: red;
+  border-radius: 10px;
+  padding: 0.5%;
+}
+
+#introduction h1 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+aside {
+  background-color: var(--white);
+  grid-area: aside;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.Lernen {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+h2 {
+  text-align: center;
+}
+
+[class*="Video"] {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+[class*='Tipps'] {
+  position: relative;
+  background-color: var(--light);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 2%;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 5%;
+  margin-top: 15%;
+  padding: 0 2rem;
+  position: relative;
+}
+
+[id*="Kurse"] {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  background-color: var(--white);
+  width:100%;
+}
+
+[id*='Kurs'] a,[id*='Kurs'] span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rosa);
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Tipps h5 {
+  position: absolute;
+  font-size: 1.2rem;
+  background-color: var(--rosa);
+  color: var(--white);
+  border-radius: 5px;
+  margin: 0 auto;
+  top: -3%;
+}
+
+#Motivation {
+  grid-area: article;
+  text-align: center;
+  background: linear-gradient( 0deg, var(--rosa), var(--violet));
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-bottom: 11%;
+  height: 90%;
+  color: var(--white);
+}
+
+#Motivation h2 {
+  font-size: 2rem;
+}
+
+#Event-Tour {
+  grid-area: tickets;
+  width: 90%;
+  height: 93%;
+  background-color: var(--gelbgrün);
+  margin: 0 auto;
+  margin-bottom: 15%;
+  padding: 1% 2%;
+}
+
+#Event-Tour h3 {
+  color: var(--white);
+  text-align: center;
+  font-size: 2rem;
+}
+
+#Days {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[class*="Date"] {
+  background-color: var(--violet);
+  text-align: center;
+  gap: 2%;
+  color: var(--white);
+  font-size: 0.9em;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+.Date p:nth-child(5) {
+  background-color: rgba(71, 14, 70, 0.9);
+  cursor: pointer;
+  height: 1.9rem;
+  padding: 0 5px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.Date p:nth-child(5):hover {
+  color: rgba(71, 14, 70, 0.9);
+  background-color: var(--white);
+}
+
+.Gebucht {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light);
+  color: var(--white);
+  width: 85%;
+  height: 35%;
+  position: absolute;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: 8px 20px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(0.3);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in-out;
+}
+
+.Gebucht.open{
+  opacity:1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+#close{
+  background-color: grey;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+/**************************************** MEDIA QUERRIES *******************************************************/
+
+@media (max-width: 450px) {
+
+  #introduction {
+    width: 95%;
+    font-size: 1.3rem;
+    height: 90%;
+  }
+
+[id*="Kurse"] h5{
+  font-size: 1.2rem;
+  width: 60%;
+  top: -1%;
+}  
+
+[class*="Tipps"]{
+  font-size: 1rem;
+}
+
+[id*='Kurs'] {
+  margin-top: 10%;
+  margin-left: 23%;
+  gap: 2%;
+  width: 100%;
+}
+
+#DieKurseSingen .Tipps h5{
+  width: 60%;
+}
+#DieKurKlavier .Tipps h5 {
+  width: 60%;
+}
+
+[id*='Kurs'] span {
+  width: 50%;
+}
+
+  #Event-Tour{
+    width: 98%;
+    height: 97%;
+    padding: 5px 5px;
+  }
+
+  #Motivation{
+    width: 98%;
+  }
+
+  .Gebucht{
+    font-size: 1.6rem;
+    left: 7%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .Logo {
+    height: 100%;
+  }
+
+  footer {
+    grid-area: footer;
+    padding: 0px;
+  }
+
+  footer .fontawesome {
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+  }
+
+  #appear {
+    display: none;
+  }
+
+  .navbar {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--variante);
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    height: auto;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    gap: 1rem;
+    padding: 0;
+    margin-right: 1rem;
+    width: auto;
+    position: static;
+  }
+
+  .nav-links a {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  /*********************************** MEDIA QUERRY INSTRUMENT.HTML ***********************/
+
+  #UseInstrument {
+    grid-template-areas:
+      "header header"
+      "section section"
+      "aside aside"
+      "article tickets"
+      "footer footer";
+  }
+
+  #UseInstrument header {
+    grid-area: header;
+  }
+
+  #introduction {
+    grid-area: section;
+    height: 70%;
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  aside{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-area: aside;
+    margin-left: 6%;
+  }
+
+  .Lernen {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .Lernen h2{
+    width: 80%;
+    text-align: center;
+  }
+
+  .Kinder {
+    width: 70%;
+  }
+
+  [id*="Kurse"] {
+    width: 100%;
+    height: 100%;
+    margin-left: 60%;
+    gap: 2%;
+    margin-bottom: 10%;
+  }
+
+  [class*="Tipps"] {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    border-radius: 2%;
+    padding: 1% 4%;
+  }
+
+  [id*="Kurse"] span {
+    margin-top: 0;
+  }
+
+  [class*="Video"] {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  #Motivation {
+    grid-area: article;
+    font-size: 1.4rem;
+    height: 93%;
+    width: 95%;
+  }
+
+  #Event-Tour {
+    grid-area: tickets;
+  }
+
+  .Gebucht{
+    left: 6%;
+    border-radius: 5px;
+    height: 35%;
+  }
+
+  #close:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    color: grey;
+  }
+}
+
+@media (min-width: 900px){
+  [id*="Kurse"] {
+    gap: 1%;
+    margin-bottom: 10%;
+  }
+
+  [class*="Video"]{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  [class*="Tipps"]{
+    padding: 0 1.5rem;
+  }
+
+  #Motivation p{
+    font-size: 1.7rem;
+  }
+
+  #Motivation {
+    margin-left: 7%;
+  }
+}
