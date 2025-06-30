@@ -626,15 +626,16 @@ h2 {
   margin: 0 auto;
   grid-area: main;
   margin-bottom: 10%;
+  padding:15px;
+  
 }
 
 .quiz-container {
   background: linear-gradient(60deg, #a0d2ea 0%, #fcf6ba 60%, #ffe5e0 100%);
   border-radius: 22px;
   width: 80%;
-  height: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto auto;
+  padding: 40px;
   box-shadow: 0 8px 32px rgba(30, 25, 35, 0.09);
   display: flex;
   flex-direction: column;
