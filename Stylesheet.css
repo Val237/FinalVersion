@@ -1,0 +1,1094 @@
+:root {
+  --variante: hsl(239, 97%, 26%);
+  --variante2: hsl(13, 79%, 43%);
+  --white: #fff;
+  --rosa: hsl(340, 100%, 50%);
+  --light: hsl(345, 2%, 85%);
+  --leuchtRot: hsl(359, 97%, 26%); 
+  --kräftigGrün: hsl(119, 97%, 26%);
+  --violet: hsl(260, 90%, 40%);
+  --gelbgrün: hsl(59, 97%, 50%); 
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.Logo {
+  width: 110px;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+#appear {
+  color: var(--white);
+  position: absolute;
+  height: 100%;
+  right: 5%;
+  top: 35%;
+}
+
+.navbar>i {
+  position: absolute;
+  top: 5%;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar {
+  position: relative;
+  grid-area: header;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border: none;
+  background-color: var(--variante);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 100%;
+  background-color: var(--variante2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  list-style: none; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links.hidden {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.nav-links a[aria-current="page"] {
+  background-color: white;
+  color: var(--variante);
+  /* ou une couleur vive */
+  padding: 0.3rem 0.8rem; 
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none; 
+} 
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/************************* FOOTER ***************************/
+
+ footer {
+  background-color: var(--variante);
+  grid-area: footer;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer .fontawesome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--white);
+  background-color: var(--variante);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.fontawesome a {
+  font-size: 37px;
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-text {
+  color: #fff;
+  text-align: center;
+}
+
+/************************************************ INDEX.HTML*/
+
+ .main-grid{
+  display: grid;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+.main-grid header {
+  grid-area: header;
+}
+
+.main-grid .page-grid { grid-area: main; }
+
+.hero-image{
+  margin-left: 20%;
+}
+
+.hero-image img{
+  width: 350px;
+}
+
+.hero-text h1 {
+  color: var(--rosa);
+  text-align: center;
+  width: 90%;
+}
+
+/* --- Container --- */
+.rock-history-slider{
+  position:relative;
+  overflow:hidden;
+  margin:5% 0;
+}
+
+/* --- Spur, die verschoben wird --- */
+.rock-history-slider .slides{
+  display:flex;
+  transition:transform .5s ease;
+}
+
+/* --- Einzelnes Slide --- */
+.rock-history-slider .sliderock{
+  flex:0 0 100%;            /* 1 Slide = 100% Viewport */
+  list-style:none;
+  position:relative;
+}
+
+/* Bild füllt Slide */
+.sliderock img{
+  width:100%;               /* GANZE Breite */
+  height:100%;
+  display:block;
+}
+
+/* Overlay */
+.sliderock .overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
+  color:#fff;
+  /* padding:1rem; */
+  font-size:0.6rem;
+  bottom: 2%;
+  text-align: center;
+}
+
+/* Pfeile */
+.slider-nav{
+  position:absolute;
+  top:50%; 
+  transform:translateY(-50%);
+  border:none; 
+  background:rgba(0,0,0,.5);
+  color:#fff; 
+  font-size:1.8rem; 
+  padding:.3rem .7rem;
+  z-index:5; 
+  cursor:pointer;
+}
+.slider-nav.prev{left:.6rem;}
+.slider-nav.next{right:.6rem;}
+
+ul{
+  list-style: none;
+  text-align: center;
+}
+
+.band-name-generator {
+  background: var(--light);
+  text-align: center;
+  border-radius: 8px;
+  margin-right: 2%;
+  margin-left: 2%;
+  height: 7%;
+}
+
+.band-name-generator h2 {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.band-name-generator p {
+  font-size: 1rem;
+  margin-right: 35px;
+  margin-bottom: 15px;
+}
+
+#generate-bandname {
+  background: var(--variante);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#generate-bandname:hover {
+  background: var(--variante2);
+}
+
+.bandname-output {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.facts {
+  background: var(--light);
+  text-align: center;
+  border-radius: 8px;
+  min-height: 80px;
+  font-size: 1.3rem;
+  margin-right: 2%;
+  margin-left: 2%;
+  height: 6%;
+}
+
+#next-fact {
+  margin-top: 1rem;
+  background-color: var(--variante);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#next-fact:hover {
+  background-color: var(--variante2);
+}
+
+.sounds {
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ .sounds h2 {
+  margin-right: 40px;
+  font-size: 2.3rem;
+}
+
+.sound-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instrument {
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+}
+
+.instrument img {
+  width: 260px; /* feste Breite für alle Icons */
+  height: 260px;/* feste Höhe für alle Icons */
+  object-fit: cover;/* Bild wird zugeschnitten, nicht verzerrt */
+  border-radius: 8px;/* optional: abgerundete Ecken */
+  transition: transform 0.2s;
+}
+
+.instrument img:hover {
+  transform: scale(1.1);
+}
+
+.instrument figcaption {
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  color: var(--variante);
+  font-weight: bold;
+}
+
+.teaser-slider{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5% 5%;
+  margin-bottom: 20%;
+}
+.sliderocky{
+  text-align: center;
+  background-color: var(--light);
+  border-radius: 10px;
+  padding-bottom: 2%;
+  list-style: none;
+}
+
+.sub-sliderock img {
+  width: 200px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.sliderocky a{
+  margin-top: 0.5rem;
+  background-color: var(--variante);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  padding: 1% 4%;
+  margin-bottom: 2%;
+}
+
+.main-grid footer { grid-area: footer; }
+
+
+/************************************************* INSTRUMENT ***********************************/
+
+
+#UseInstrument {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "intro "
+    "kinder "
+    "article "
+    "tickets "
+    "footer ";
+} 
+
+#UseInstrument header {
+  grid-area: header;
+}
+
+.Kinder {
+  margin-left: 5%;
+  width: 90%;
+  height: 85%;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#introduction {
+  grid-area: intro;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: cornflowerblue;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: var(--white);
+}
+
+#introduction #Text {
+  color: var(--white);
+  background-color: red;
+  border-radius: 10px;
+  padding: 0.5%;
+}
+
+#introduction h1 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+#One-Section {
+  background-color: var(--white);
+  grid-area: kinder;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.Lernen {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+h2 {
+  text-align: center;
+}
+
+[class*="Video"] {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+[class*='Tipps'] {
+  position: relative;
+  background-color: var(--light);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 2%;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 5%;
+  margin-top: 15%;
+  padding: 0 2rem;
+  position: relative;
+}
+
+[id*="Kurse"] {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  background-color: var(--white);
+  width:100%;
+}
+
+[id*='Kurs'] a,[id*='Kurs'] span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rosa);
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Tipps h5 {
+  position: absolute;
+  font-size: 1.2rem;
+  background-color: var(--rosa);
+  color: var(--white);
+  border-radius: 5px;
+  margin: 0 auto;
+  top: -3%;
+}
+
+#Motivation {
+  grid-area: article;
+  text-align: center;
+  background: linear-gradient( 0deg, var(--rosa), var(--violet));
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-bottom: 11%;
+  height: 90%;
+  color: var(--white);
+}
+
+#Motivation h2 {
+  font-size: 2rem;
+}
+
+#Event-Tour {
+  grid-area: tickets;
+  width: 90%;
+  height: 93%;
+  background-color: var(--gelbgrün);
+  margin: 0 auto;
+  margin-bottom: 15%;
+  padding: 1% 2%;
+} 
+
+#Event-Tour h3 {
+  color: var(--white);
+  text-align: center;
+  font-size: 2rem;
+}
+
+#Days {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+[class*="Date"] {
+  background-color: var(--violet);
+  text-align: center;
+  gap: 2%;
+  color: var(--white);
+  font-size: 0.9em;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+.Date p:nth-child(5) {
+  background-color: rgba(71, 14, 70, 0.9);
+  cursor: pointer;
+  height: 1.9rem;
+  padding: 0 5px;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.Date p:nth-child(5):hover {
+  color: rgba(71, 14, 70, 0.9);
+  background-color: var(--white);
+}
+
+.Gebucht {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light);
+  color: var(--white);
+  width: 85%;
+  height: 35%;
+  position: absolute;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: 8px 20px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(0.3);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in-out;
+}
+
+.Gebucht.open{
+  opacity:1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+#close{
+  background-color: grey;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 10px;
+} 
+
+/****************************************QUIZ HTML *******************************************************/
+
+.quiz-page {
+  display: grid;
+  grid-template-areas: 'header header'
+    'main main'
+    'footer footer';
+  height: 100vh;
+  color: #262626;
+  background-color: #fff;
+}
+
+.quiz-page header {
+  height: 100%;
+  grid-area: header
+}
+
+.quiz-page main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  grid-area: main;
+  margin-bottom: 10%;
+}
+
+.quiz-container {
+  background: linear-gradient(60deg, #a0d2ea 0%, #fcf6ba 60%, #ffe5e0 100%);
+  border-radius: 22px;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(30, 25, 35, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.quiz-container h1 {
+  background: #ffe066;
+  color: #272727;
+  border-radius: 14px;
+  padding: 0.4em 0;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.frage h2 {
+  font-size: 1.13em;
+  color: purple;
+  margin-bottom: 1.1em;
+  text-align: center;
+}
+
+.quiz-audio-btn {
+  background: #41b7e8;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 8px 19px;
+  margin: 14px auto 22px auto;
+  display: block;
+  font-size: 1em;
+  box-shadow: 0 1px 6px rgba(20, 20, 50, 0.11);
+}
+
+.quiz-btn {
+  background: purple;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  padding: 0.7em 1.3em;
+  margin: 1.0em auto 0 auto;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+  /* box-shadow: 0 2px 11px rgba(30, 25, 35, 0.07); */
+}
+
+.quiz-btn:disabled {
+  background: #bbb;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+input[type="text"] {
+  width: 87%;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1.5px solid #e3e3e3;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quiz-feedback {
+  margin-top: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.quiz-feedback.richtig {
+  color: #16b978;
+}
+
+.quiz-feedback.falsch {
+  color: #ff4155;
+}
+
+/**************************************** MEDIA QUERRIES *******************************************************/
+
+@media (max-width: 450px) {
+
+#introduction {
+    width: 95%;
+    font-size: 1.3rem;
+    height: 90%;
+  }
+
+[id*="Kurse"] h5{
+  font-size: 1.2rem;
+  width: 60%;
+  top: -1%;
+}  
+
+[class*="Tipps"]{
+  font-size: 1rem;
+}
+
+[id*='Kurs'] {
+  margin-top: 10%;
+  margin-left: 23%;
+  gap: 2%;
+  width: 100%;
+}
+
+#DieKurseSingen .Tipps h5{
+  width: 60%;
+}
+#DieKurKlavier .Tipps h5 {
+  width: 60%;
+}
+
+[id*='Kurs'] span {
+  width: 50%;
+}
+
+  #Event-Tour{
+    width: 98%;
+    height: 97%;
+    padding: 5px 5px;
+  }
+
+  #Motivation{
+    width: 98%;
+  }
+
+  .Gebucht{
+    font-size: 1.6rem;
+    left: 7%;
+  }
+}
+
+@media (max-width: 560px){
+  .sliderocky{
+    margin-bottom: 8%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .Logo {
+    height: 100%;
+  }
+
+  footer {
+    grid-area: footer;
+    padding: 0px;
+  }
+
+  footer .fontawesome {
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+  }
+
+  #appear {
+    display: none;
+  }
+
+  .navbar {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--variante);
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    height: auto;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    gap: 1rem;
+    padding: 0;
+    margin-right: 1rem;
+    width: auto;
+    position: static;
+  }
+
+  .nav-links a {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  } 
+
+  /***************************** MEDIA QUERRY INDEX ***********************************************/
+
+  .page-grid{
+    display: grid;
+    
+  }
+
+  .hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    font-size: 1.5rem;
+  }
+
+  .hero-image{
+    width: 60%;
+  }
+
+  .hero-text{
+    width: 100%;
+  }
+
+  .rock-history-slider{
+    margin-bottom: 0;
+    max-height: 90%;
+  }
+
+  .slider-wrapper{
+    max-height: 100%;
+  }
+
+  .sliderock .overlay{
+    bottom: 15%;
+    font-size: 1rem;
+  }
+
+  .band-name-generator{
+    margin-top: 0;
+    height: 90%;
+    margin-bottom: 5%;
+  }
+
+  .band-name-generator h2 {
+    font-size: 3rem;
+  }
+
+  .band-name-generator p{
+    font-size: 2rem;
+  }
+
+  .facts {
+    font-size: 2rem;
+    height: 100%;
+    padding: 2% 0;
+  }
+
+  .teaser-slider{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2%;
+  }
+
+  .sub-sliderock img{
+    height: 200px;
+  }  
+
+  /*********************************** MEDIA QUERRY INSTRUMENT.HTML ***********************/
+
+  #UseInstrument {
+    grid-template-areas:
+      "header header"
+      "intro intro"
+      "kinder kinder"
+      "article tickets"
+      "footer footer";
+  }
+
+  #UseInstrument header {
+    grid-area: header;
+  }
+
+  #introduction {
+    grid-area: intro;
+    height: 70%;
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+  #One-Section{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-area: kinder;
+    margin-left: 6%;
+  }
+
+  .Lernen {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .Lernen h2{
+    width: 80%;
+    text-align: center;
+  }
+
+  .Kinder {
+    width: 70%;
+  }
+
+  [id*="Kurse"] {
+    width: 100%;
+    height: 100%;
+    margin-left: 60%;
+    gap: 2%;
+    margin-bottom: 10%;
+  }
+
+  [class*="Tipps"] {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    border-radius: 2%;
+    padding: 1% 4%;
+  }
+
+  [id*="Kurse"] span {
+    margin-top: 0;
+  }
+
+  [class*="Video"] {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  #Motivation {
+    grid-area: article;
+    font-size: 1.4rem;
+    height: 93%;
+    width: 95%;
+  }
+
+  #Event-Tour {
+    grid-area: tickets;
+  }
+
+  .Gebucht{
+    left: 6%;
+    border-radius: 5px;
+    height: 35%;
+  }
+
+  #close:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    color: grey;
+  }
+/****************************************MEDIA QUERRY QUIZ HTML *************************************/
+   body.quiz-page .quiz-container {
+    width: 40%;
+    padding: 40px;
+    font-size: 1.1rem;
+    margin-top: 3%;
+  }
+
+  body.quiz-page .quiz-container h1 {
+    font-size: 2rem;
+  }
+
+  body.quiz-page .quiz-btn,
+  body.quiz-page .quiz-audio-btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+
+  footer {
+    grid-area: footer;
+    padding: 0px;
+  }
+
+  footer .fontawesome {
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+  }
+
+  #appear {
+    display: none;
+  }
+
+  .navbar {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background-color: var(--variante);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    height: auto;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    gap: 2rem;
+    padding: 0;
+    margin-right: 1rem;
+    width: auto;
+    position: static;
+  }
+
+  .nav-links a {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .quiz-page {
+    max-height: 100%;
+  }
+
+}
+
+@media (min-width: 900px){
+  [id*="Kurse"] {
+    gap: 1%;
+    margin-bottom: 10%;
+  }
+
+  [class*="Video"]{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  [class*="Tipps"]{
+    padding: 0 1.5rem;
+  }
+
+  #Motivation p{
+    font-size: 1.7rem;
+  }
+
+  #Motivation {
+    margin-left: 7%;
+  } 
+}
