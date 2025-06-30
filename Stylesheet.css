@@ -4,10 +4,10 @@
   --white: #fff;
   --rosa: hsl(340, 100%, 50%);
   --light: hsl(345, 2%, 85%);
-  --leuchtRot: hsl(359, 97%, 26%); 
+  --leuchtRot: hsl(359, 97%, 26%);
   --kräftigGrün: hsl(119, 97%, 26%);
   --violet: hsl(260, 90%, 40%);
-  --gelbgrün: hsl(59, 97%, 50%); 
+  --gelbgrün: hsl(59, 97%, 50%);
 }
 
 * {
@@ -15,7 +15,8 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
-html,body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -65,12 +66,12 @@ html,body {
   left: 0;
   width: 100%;
   background-color: var(--variante2);
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
-  list-style: none; 
+  list-style: none;
   transition: display 0.3s ease-in-out;
   /* display:none */
 }
@@ -201,9 +202,9 @@ footer .footer-text {
 }
 
 .Lernen {
-    width: 100%;
-    margin: 0 auto;
-  }
+  width: 100%;
+  margin: 0 auto;
+}
 
 h2 {
   text-align: center;
@@ -237,24 +238,25 @@ h2 {
   margin-bottom: 5%;
   margin-left: 30%;
   background-color: var(--white);
-  width:100%;
+  width: 100%;
 }
 
-[id*='Kurs'] a,[id*='Kurs'] span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--rosa);
-    width: 50%;
-    height: 50px;
-    text-align: center;
-    color: var(--white);
-    font-size: 2rem;
-    border-radius: 10px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    text-decoration: none;
-    cursor: pointer;
+[id*='Kurs'] a,
+[id*='Kurs'] span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rosa);
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .Tipps h5 {
@@ -270,7 +272,7 @@ h2 {
 #Motivation {
   grid-area: article;
   text-align: center;
-  background: linear-gradient( 0deg, var(--rosa), var(--violet));
+  background: linear-gradient(0deg, var(--rosa), var(--violet));
   border-radius: 10px;
   width: 90%;
   margin: 0 auto;
@@ -351,25 +353,27 @@ h2 {
   transition: opacity 0.4s ease-in, transform 0.4s ease-in-out;
 }
 
-.Gebucht.open{
-  opacity:1;
+.Gebucht.open {
+  opacity: 1;
   z-index: 1;
   transform: scale(1);
 }
 
-#close{
+#close {
   background-color: grey;
   cursor: pointer;
   padding: 5px 20px;
   border-radius: 10px;
 }
+
 /**************************************** Rockstar-werden *******************************************************/
 
 /* Bereich: Rockstar-Seite Layout und Komponenten */
 
 /* Haupt-Grid für die Rockstar-Seite */
 #Rockstar {
-  display: grid; /* Grid-Layout aktivieren */
+  display: grid;
+  /* Grid-Layout aktivieren */
   grid-template-areas:
     "header"
     "first"
@@ -379,339 +383,522 @@ h2 {
     "third"
     "legends"
     "quiz"
-    "footer"; /* Definiert die Reihenfolge der Bereiche */
-  background: linear-gradient(120deg, #a0d2ea 10%, #fcf6ba 60%, #ffe5e0 100%); /* Farbverlauf als Hintergrund */
-  /* color: #fff; */ /* Auskommentiert: könnte Textfarbe setzen */
+    "footer";
+  /* Definiert die Reihenfolge der Bereiche */
+  background: linear-gradient(120deg, #a0d2ea 10%, #fcf6ba 60%, #ffe5e0 100%);
+  /* Farbverlauf als Hintergrund */
+  /* color: #fff; */
+  /* Auskommentiert: könnte Textfarbe setzen */
 }
 
 /* Grid-Bereich für die erste Seite */
 #Rockstar .first-page {
-  grid-area: first; /* Weist diesen Bereich dem Grid-Area "first" zu */
-  width: 100vw; /* Volle Breite des Viewports */
-  height: auto; /* Höhe passt sich dem Inhalt an */
-  display: flex; /* Flexbox-Layout */
-  flex-direction: column; /* Elemente untereinander anordnen */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: first;
+  /* Weist diesen Bereich dem Grid-Area "first" zu */
+  width: 100vw;
+  /* Volle Breite des Viewports */
+  height: auto;
+  /* Höhe passt sich dem Inhalt an */
+  display: flex;
+  /* Flexbox-Layout */
+  flex-direction: column;
+  /* Elemente untereinander anordnen */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
-#Rockstar .first-page > div {
-  width: 100vw; /* Volle Breite des Viewports */
+#Rockstar .first-page>div {
+  width: 100vw;
+  /* Volle Breite des Viewports */
 }
 
 /* Header-Bereich im Grid */
 .Rock-header {
-  grid-area: header; /* Weist dem Grid-Bereich "header" zu */
+  grid-area: header;
+  /* Weist dem Grid-Bereich "header" zu */
 }
 
 /* Grid-Bereich für die zweite Seite */
 #Rockstar .second-page {
-  grid-area: second; /* Grid-Area "second" */
-  width: 100vw; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: second;
+  /* Grid-Area "second" */
+  width: 100vw;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Grid-Bereich für das Video */
 #Rockstar .video {
-  grid-area: video; /* Grid-Area "video" */
-  width: 100vw; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
-  background: transparent; /* Kein Hintergrund */
+  grid-area: video;
+  /* Grid-Area "video" */
+  width: 100vw;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
+  background: transparent;
+  /* Kein Hintergrund */
 }
 
 /* Grid-Bereich für das Karussell */
 #Rockstar .carousel {
-  grid-area: carousel; /* Grid-Area "carousel" */
-  width: auto; /* Breite automatisch */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: carousel;
+  /* Grid-Area "carousel" */
+  width: auto;
+  /* Breite automatisch */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Grid-Bereich für die dritte Seite */
 #Rockstar .third-page {
-  grid-area: third; /* Grid-Area "third" */
-  width: 100vw; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: third;
+  /* Grid-Area "third" */
+  width: 100vw;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Grid-Bereich für das Quiz */
 #Rockstar .rockquiz-page {
-  grid-area: quiz; /* Grid-Area "quiz" */
-  width: 100vw; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: quiz;
+  /* Grid-Area "quiz" */
+  width: 100vw;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Grid-Bereich für den Footer */
 #Rockstar .Rock-footer {
-  grid-area: footer; /* Grid-Area "footer" */
-  width: 100vw; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  grid-area: footer;
+  /* Grid-Area "footer" */
+  width: 100vw;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Navigationselemente in der Navbar */
 .navbar ul li {
-  list-style: none; /* Keine Aufzählungszeichen */
-  text-align: center; /* Text zentriert */
-  font-size: 1.5rem; /* Schriftgröße */
-  padding: 1rem; /* Innenabstand */
-  color: white; /* Schriftfarbe */
+  list-style: none;
+  /* Keine Aufzählungszeichen */
+  text-align: center;
+  /* Text zentriert */
+  font-size: 1.5rem;
+  /* Schriftgröße */
+  padding: 1rem;
+  /* Innenabstand */
+  color: white;
+  /* Schriftfarbe */
 }
 
 /* Hauptüberschrift */
 h1 {
-  font-size: 2.5rem; /* Große Schrift */
-  margin-top: 1rem; /* Abstand nach oben */
-  color: red; /* Rote Schrift */
-  line-height: 1.1; /* Zeilenhöhe */
-  text-align: center; /* Zentriert */
+  font-size: 2.5rem;
+  /* Große Schrift */
+  margin-top: 1rem;
+  /* Abstand nach oben */
+  color: red;
+  /* Rote Schrift */
+  line-height: 1.1;
+  /* Zeilenhöhe */
+  text-align: center;
+  /* Zentriert */
 }
 
 /* Container für Inhalt auf der ersten Seite */
 .first-page>div {
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
-  height: auto; /* Höhe automatisch */
-  background-color: #e0ecaf; /* Hellgrüner Hintergrund */
-  padding: 20px; /* Innenabstand */
-  gap: 15px; /* Abstand zwischen Elementen */
-  transition: all 0.6s ease; /* Sanfter Übergang bei Änderungen */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
+  height: auto;
+  /* Höhe automatisch */
+  background-color: #e0ecaf;
+  /* Hellgrüner Hintergrund */
+  padding: 20px;
+  /* Innenabstand */
+  gap: 15px;
+  /* Abstand zwischen Elementen */
+  transition: all 0.6s ease;
+  /* Sanfter Übergang bei Änderungen */
 }
 
 /* Alle Kindelemente im ersten Seitenbereich zentrieren */
 .first-page>div * {
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
 }
 
 /* Button-Stil im ersten Seitenbereich */
 .btn_1 a {
   text-decoration: none;
-  background-color: hsl(239, 97%, 26%); /* Dunkelblauer Hintergrund */
-  color: white; /* Weiße Schrift */
-  padding: 20px; /* Innenabstand */
-  height: auto; /* Höhe automatisch */
-  border: solid 1px black; /* Schwarzer Rand */
-  border-radius: 15px; /* Abgerundete Ecken */
-  box-shadow: 10px 6px 10px rgba(20, 20, 20, 0.2); /* Schatten */
-  font-weight: bolder; /* Fette Schrift */
-  font-size: 1.0rem; /* Schriftgröße */
+  background-color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Hintergrund */
+  color: white;
+  /* Weiße Schrift */
+  padding: 20px;
+  /* Innenabstand */
+  height: auto;
+  /* Höhe automatisch */
+  border: solid 1px black;
+  /* Schwarzer Rand */
+  border-radius: 15px;
+  /* Abgerundete Ecken */
+  box-shadow: 10px 6px 10px rgba(20, 20, 20, 0.2);
+  /* Schatten */
+  font-weight: bolder;
+  /* Fette Schrift */
+  font-size: 1.0rem;
+  /* Schriftgröße */
 }
 
 /* Hover-Effekt für Button */
 .btn_1 a:hover {
-  background-color: white; /* Weißer Hintergrund beim Hover */
-  color: hsl(239, 97%, 26%); /* Dunkelblauer Text beim Hover */
+  background-color: white;
+  /* Weißer Hintergrund beim Hover */
+  color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Text beim Hover */
 }
 
 /* Bildgröße im .image-Container */
 .image>img {
-  width: 100%; /* Volle Breite */
-  height: 100%; /* Volle Höhe */
-  max-width: 600px; /* Maximal 600px breit */
+  width: 100%;
+  /* Volle Breite */
+  height: 100%;
+  /* Volle Höhe */
+  max-width: 600px;
+  /* Maximal 600px breit */
 }
 
 /* Textstil auf der zweiten Seite */
 .second-page .text {
-  font-size: 1.2rem; /* Schriftgröße */
-  padding: 25px; /* Innenabstand */
-  color: hsl(239, 97%, 26%); /* Dunkelblauer Text */
+  font-size: 1.2rem;
+  /* Schriftgröße */
+  padding: 25px;
+  /* Innenabstand */
+  color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Text */
 }
 
 /* Übergangseffekt für Video-Content */
 #content-video {
-  transition: all 0.6s ease; /* Sanfter Übergang */
+  transition: all 0.6s ease;
+  /* Sanfter Übergang */
 }
 
 /* Video-Bereich: Grid-Zuweisung und Flex-Layout */
 .video {
-  grid-area: aside; /* Grid-Area "aside" (kann angepasst werden) */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  width: 100%; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
+  grid-area: aside;
+  /* Grid-Area "aside" (kann angepasst werden) */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  width: 100%;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
 }
 
 /* Video selbst: nimmt volle Breite ein, max. 600px */
 .video video {
-  width: 100%; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  max-width: 600px; /* Maximal 600px breit */
+  width: 100%;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  max-width: 600px;
+  /* Maximal 600px breit */
 }
 
 /* Karussell-Bereich: Grid-Zuweisung und Layout */
-.carousel,.carousel>div {
-  position: relative; /* Für absolute Positionierung von Elementen */
-  width: 100%; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  overflow: hidden; /* Überlauf verstecken */
+.carousel,
+.carousel>div {
+  position: relative;
+  /* Für absolute Positionierung von Elementen */
+  width: 100%;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  overflow: hidden;
+  /* Überlauf verstecken */
 }
 
 /* Slider-Container: Flex-Layout für Slides */
 .slider {
-  display: flex; /* Flexbox */
-  align-items: center; /* Zentriert vertikal */
-  transition: transform 0.6s ease; /* Sanfter Übergang beim Verschieben */
-  width: 100%; /* Volle Breite */
+  display: flex;
+  /* Flexbox */
+  align-items: center;
+  /* Zentriert vertikal */
+  transition: transform 0.6s ease;
+  /* Sanfter Übergang beim Verschieben */
+  width: 100%;
+  /* Volle Breite */
   /* 100vw * nombre de slides */
 }
 
 /* Einzelne Slide: nimmt 100% der Breite ein */
 .slide {
-  flex: 0 0 100vw; /* Jede Slide nimmt die volle Viewport-Breite ein */
-  display: flex; /* Flexbox */
-  height: 100%; /* 40% Höhe (vom Elternelement) */
-  align-items: center; /* Zentriert vertikal */
-  justify-content: center; /* Zentriert horizontal */
+  flex: 0 0 100vw;
+  /* Jede Slide nimmt die volle Viewport-Breite ein */
+  display: flex;
+  /* Flexbox */
+  height: 100%;
+  /* 40% Höhe (vom Elternelement) */
+  align-items: center;
+  /* Zentriert vertikal */
+  justify-content: center;
+  /* Zentriert horizontal */
 }
 
 /* Bild in der Slide: 30% Breite, 20% Höhe, zugeschnitten */
 .slide img {
-  width: 30%; /* 30% der Breite der Slide */
-  height: 40%; /* 20% der Höhe der Slide */
-  object-fit: cover; /* Bild wird zugeschnitten, nicht verzerrt */
+  width: 30%;
+  /* 30% der Breite der Slide */
+  height: 40%;
+  /* 20% der Höhe der Slide */
+  object-fit: cover;
+  /* Bild wird zugeschnitten, nicht verzerrt */
 }
 
 /* Textbereich im Quiz */
 .rockquiz-page .text {
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
-  color: hsl(239, 97%, 26%); /* Dunkelblauer Text */
-  max-width: 100vw; /* Maximal volle Viewport-Breite */
-  padding: 15px; /* Innenabstand */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
+  color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Text */
+  max-width: 100vw;
+  /* Maximal volle Viewport-Breite */
+  padding: 15px;
+  /* Innenabstand */
 }
 
 /* Button im Quiz-Textbereich */
 #Rockstar .btn a {
-  background-color: hsl(239, 97%, 26%); /* Dunkelblauer Hintergrund */
-  color: white; /* Weiße Schrift */
-  padding: 20px; /* Innenabstand */
-  height: auto; /* Höhe automatisch */
-  border: solid 1px black; /* Schwarzer Rand */
-  border-radius: 15px; /* Abgerundete Ecken */
-  box-shadow: 10px 6px 10px rgba(20, 20, 20, 0.2); /* Schatten */
-  font-weight: bolder; /* Fette Schrift */
-  font-size: 1.0rem; /* Schriftgröße */
+  background-color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Hintergrund */
+  color: white;
+  /* Weiße Schrift */
+  padding: 20px;
+  /* Innenabstand */
+  height: auto;
+  /* Höhe automatisch */
+  border: solid 1px black;
+  /* Schwarzer Rand */
+  border-radius: 15px;
+  /* Abgerundete Ecken */
+  box-shadow: 10px 6px 10px rgba(20, 20, 20, 0.2);
+  /* Schatten */
+  font-weight: bolder;
+  /* Fette Schrift */
+  font-size: 1.0rem;
+  /* Schriftgröße */
 }
 
 /* Link im Button */
 #Rockstar .btn a {
-  color: white; /* Weiße Schrift */
-  text-decoration: none; /* Keine Unterstreichung */
+  color: white;
+  /* Weiße Schrift */
+  text-decoration: none;
+  /* Keine Unterstreichung */
   padding-top: 10px;
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
 }
 
 /* Navigationsbutton für Slider (links und rechts) */
 .navb {
-  position: absolute; /* Absolut positioniert */
-  transform: translateY(-50%); /* Vertikal zentriert */
-  background: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
-  color: white; /* Weiße Schrift */
-  font-size: 1rem; /* Schriftgröße */
-  border: none; /* Kein Rand */
-  padding: 10px 20px; /* Innenabstand */
-  cursor: pointer; /* Hand-Cursor */
-  z-index: 2; /* Über anderen Elementen */
-  top: 50%; /* Vertikal zentriert */
+  position: absolute;
+  /* Absolut positioniert */
+  transform: translateY(-50%);
+  /* Vertikal zentriert */
+  background: rgba(0, 0, 0, 0.5);
+  /* Halbtransparenter Hintergrund */
+  color: white;
+  /* Weiße Schrift */
+  font-size: 1rem;
+  /* Schriftgröße */
+  border: none;
+  /* Kein Rand */
+  padding: 10px 20px;
+  /* Innenabstand */
+  cursor: pointer;
+  /* Hand-Cursor */
+  z-index: 2;
+  /* Über anderen Elementen */
+  top: 50%;
+  /* Vertikal zentriert */
 }
 
 .navb.left {
-  left: 10px; /* Links positioniert */
+  left: 10px;
+  /* Links positioniert */
 }
 
 .navb.right {
-  right: 10px; /* Rechts positioniert */
+  right: 10px;
+  /* Rechts positioniert */
 }
 
 /* Bereich für Rockstar-Legenden */
 .rockstar-Legends {
-  grid-area: legends; 
-  display: flex; /* Flexbox */
+  grid-area: legends;
+  display: flex;
+  /* Flexbox */
   width: 100vw;
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
-  background-color: #243b55; /* Dunkelblauer Hintergrund */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
+  background-color: #243b55;
+  /* Dunkelblauer Hintergrund */
   /* bleu nuit élégant */
-  padding: 20px; /* Innenabstand */
-  gap: 5px; /* Abstand zwischen Elementen */
+  padding: 20px;
+  /* Innenabstand */
+  gap: 5px;
+  /* Abstand zwischen Elementen */
 }
 
-.rockstar-Legends p{
-  color: white; /* Weiße Schrift */
-  font-size: 1.2rem; /* Schriftgröße */
-  text-align: center; /* Zentriert */
-  margin-bottom: 10px; /* Abstand nach unten */
+.rockstar-Legends p {
+  color: white;
+  /* Weiße Schrift */
+  font-size: 1.2rem;
+  /* Schriftgröße */
+  text-align: center;
+  /* Zentriert */
+  margin-bottom: 10px;
+  /* Abstand nach unten */
 }
 
 /* Container für Legenden: Zeilenweise, mit Abstand */
 .rockstar-legend-container {
-  display: flex; /* Flexbox */
-  flex-direction: row; /* Nebeneinander */
-  align-items: start; /* Am oberen Rand ausgerichtet */
-  flex-wrap: wrap; /* Umbruch bei Platzmangel */
-  width: 100%; /* Volle Breite */
-  height: auto; /* Höhe automatisch */
-  justify-content: space-around; /* Gleichmäßiger Abstand */
+  display: flex;
+  /* Flexbox */
+  flex-direction: row;
+  /* Nebeneinander */
+  align-items: start;
+  /* Am oberen Rand ausgerichtet */
+  flex-wrap: wrap;
+  /* Umbruch bei Platzmangel */
+  width: 100%;
+  /* Volle Breite */
+  height: auto;
+  /* Höhe automatisch */
+  justify-content: space-around;
+  /* Gleichmäßiger Abstand */
 }
 
 /* Einzelne Legende: kleine Spalte, zentriert */
 .rockstar-legend-container>figure {
-  width: 4vw; /* 4% der Viewport-Breite */
-  height: auto; /* Höhe automatisch */
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Untereinander */
-  align-items: center; /* Zentriert horizontal */
-  justify-content: center; /* Zentriert vertikal */
+  width: 4vw;
+  /* 4% der Viewport-Breite */
+  height: auto;
+  /* Höhe automatisch */
+  display: flex;
+  /* Flexbox */
+  flex-direction: column;
+  /* Untereinander */
+  align-items: center;
+  /* Zentriert horizontal */
+  justify-content: center;
+  /* Zentriert vertikal */
 }
 
 /* Bild der Legende: max. 150px breit, zugeschnitten */
 .rockstar-Legends img {
-  max-width: 150px; /* Maximal 150px breit */
-  height: auto; /* Höhe automatisch */
-  display: block; /* Blockelement */
-  object-fit: contain; /* Bild wird vollständig angezeigt, ohne Verzerrung */
+  max-width: 150px;
+  /* Maximal 150px breit */
+  height: auto;
+  /* Höhe automatisch */
+  display: block;
+  /* Blockelement */
+  object-fit: contain;
+  /* Bild wird vollständig angezeigt, ohne Verzerrung */
 }
 
 /* Linkstil für Legenden */
 .rockstar-legend-container a {
-  text-decoration: none; /* Keine Unterstreichung */
-  color: white; /* Weiße Schrift */
-  font-weight: bold; /* Fette Schrift */
-  font-size: 1rem; /* Schriftgröße */
+  text-decoration: none;
+  /* Keine Unterstreichung */
+  color: white;
+  /* Weiße Schrift */
+  font-weight: bold;
+  /* Fette Schrift */
+  font-size: 1rem;
+  /* Schriftgröße */
 }
 
 /* Textfarbe für die dritte Seite */
 .third-page {
-  color: hsl(239, 97%, 26%); /* Dunkelblauer Text */
+  color: hsl(239, 97%, 26%);
+  /* Dunkelblauer Text */
 }
 
 /**************************************** MEDIA QUERRIES *******************************************************/
@@ -724,45 +911,46 @@ h1 {
     height: 90%;
   }
 
-[id*="Kurse"] h5{
-  font-size: 1.2rem;
-  width: 60%;
-  top: -1%;
-}  
+  [id*="Kurse"] h5 {
+    font-size: 1.2rem;
+    width: 60%;
+    top: -1%;
+  }
 
-[class*="Tipps"]{
-  font-size: 1rem;
-}
+  [class*="Tipps"] {
+    font-size: 1rem;
+  }
 
-[id*='Kurs'] {
-  margin-top: 10%;
-  margin-left: 23%;
-  gap: 2%;
-  width: 100%;
-}
+  [id*='Kurs'] {
+    margin-top: 10%;
+    margin-left: 23%;
+    gap: 2%;
+    width: 100%;
+  }
 
-#DieKurseSingen .Tipps h5{
-  width: 60%;
-}
-#DieKurKlavier .Tipps h5 {
-  width: 60%;
-}
+  #DieKurseSingen .Tipps h5 {
+    width: 60%;
+  }
 
-[id*='Kurs'] span {
-  width: 50%;
-}
+  #DieKurKlavier .Tipps h5 {
+    width: 60%;
+  }
 
-  #Event-Tour{
+  [id*='Kurs'] span {
+    width: 50%;
+  }
+
+  #Event-Tour {
     width: 98%;
     height: 97%;
     padding: 5px 5px;
   }
 
-  #Motivation{
+  #Motivation {
     width: 98%;
   }
 
-  .Gebucht{
+  .Gebucht {
     font-size: 1.6rem;
     left: 7%;
   }
@@ -821,9 +1009,10 @@ h1 {
     color: white;
     text-decoration: none;
   }
+
   .nav-links.hidden {
-  display: flex;
-}
+    display: flex;
+  }
 
   /*********************************** MEDIA QUERRY INSTRUMENT.HTML ***********************/
 
@@ -859,7 +1048,7 @@ h1 {
     margin: 0 auto;
   }
 
-  .Lernen h2{
+  .Lernen h2 {
     width: 80%;
     text-align: center;
   }
@@ -905,36 +1094,36 @@ h1 {
     grid-area: tickets;
   }
 
-  .Gebucht{
+  .Gebucht {
     left: 6%;
     border-radius: 5px;
     height: 35%;
   }
 
-  #close:hover{
+  #close:hover {
     cursor: pointer;
     background-color: var(--white);
     color: grey;
   }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
   [id*="Kurse"] {
     gap: 1%;
     margin-bottom: 10%;
   }
 
-  [class*="Video"]{
+  [class*="Video"] {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/9;
   }
 
-  [class*="Tipps"]{
+  [class*="Tipps"] {
     padding: 0 1.5rem;
   }
 
-  #Motivation p{
+  #Motivation p {
     font-size: 1.7rem;
   }
 
@@ -944,7 +1133,7 @@ h1 {
 }
 
 @media (min-width: 1025px) {
-.teaser {
+  .teaser {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1140,7 +1329,7 @@ h1 {
     color: white;
     text-decoration: none;
     padding-top: 10px;
-    padding-bottom: 10px ;
+    padding-bottom: 10px;
   }
 
   .rockstar-Legends {
