@@ -65,19 +65,21 @@ html,body {
   left: 0;
   width: 100%;
   background-color: var(--variante2);
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
   list-style: none; 
-  transition: opacity 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
+  /* display:none */
 }
 
 .nav-links.hidden {
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  /* overflow: hidden;
+  opacity: 0; */
+  display: none;
+  transition: display 0.3s ease-in-out;
 }
 
 .nav-links a[aria-current="page"] {
