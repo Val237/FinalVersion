@@ -1749,6 +1749,9 @@ h1 {
     height: auto;
   }
 
+  #Rockstar ul{
+    text-align: left;
+  }
 
   #Rockstar .rockstar-Legends {
     width: 75%;
@@ -1763,14 +1766,8 @@ h1 {
     justify-content: center;
   }
 
-  #Rockstar .rockquiz-page {
-    width: auto;
-    height: auto;
-  }
 
   #Rockstar .Rock-footer {
-    width: auto;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1810,10 +1807,6 @@ h1 {
 
   .slider img:hover {
     transform: scale(1.05);
-  }
-
-  .rockquiz-page {
-    grid-area: section5;
   }
 
   .rockquiz-page .text {
