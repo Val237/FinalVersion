@@ -77,23 +77,21 @@ html,body {
 .nav-links.hidden {
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .nav-links a[aria-current="page"] {
   background-color: white;
   color: var(--variante);
   /* ou une couleur vive */
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0.8rem; 
   border-radius: 8px;
   text-decoration: none;
 }
 
 .nav-links a {
   color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
+  text-decoration: none; 
+} 
 
 .nav-links a:hover {
   text-decoration: underline;
@@ -101,7 +99,7 @@ html,body {
 
 /************************* FOOTER ***************************/
 
-footer {
+ footer {
   background-color: var(--variante);
   grid-area: footer;
   padding: 1rem 0;
@@ -135,19 +133,261 @@ footer .footer-text {
   text-align: center;
 }
 
+/************************************************ INDEX.HTML*********************************/
+
+ .main-grid{
+  display: grid;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+.main-grid header {
+  grid-area: header;
+}
+
+.main-grid .page-grid { grid-area: main; }
+
+.hero-image{
+  margin-left: 20%;
+}
+
+.hero-image img{
+  width: 350px;
+}
+
+.hero-text h1 {
+  color: var(--rosa);
+  text-align: center;
+  width: 90%;
+}
+
+/* --- Container --- */
+.rock-history-slider{
+  position:relative;
+  overflow:hidden;
+  margin:5% 0;
+}
+
+/* --- Spur, die verschoben wird --- */
+.rock-history-slider .slides{
+  display:flex;
+  transition:transform .5s ease;
+}
+
+/* --- Einzelnes Slide --- */
+.rock-history-slider .sliderock{
+  flex:0 0 100%;            /* 1 Slide = 100% Viewport */
+  list-style:none;
+  position:relative;
+}
+
+/* Bild füllt Slide */
+.sliderock img{
+  width:100%;               /* GANZE Breite */
+  height:100%;
+  display:block;
+}
+
+/* Overlay */
+.sliderock .overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
+  color:#fff;
+  /* padding:1rem; */
+  font-size:0.6rem;
+  bottom: 2%;
+  text-align: center;
+}
+
+/* Pfeile */
+.slider-nav{
+  position:absolute;
+  top:50%; 
+  transform:translateY(-50%);
+  border:none; 
+  background:rgba(0,0,0,.5);
+  color:#fff; 
+  font-size:1.8rem; 
+  padding:.3rem .7rem;
+  z-index:5; 
+  cursor:pointer;
+}
+.slider-nav.prev{left:.6rem;}
+.slider-nav.next{right:.6rem;}
+
+ul{
+  list-style: none;
+  text-align: center;
+}
+
+.band-name-generator {
+  background: var(--light);
+  text-align: center;
+  border-radius: 8px;
+  margin-right: 2%;
+  margin-left: 2%;
+  height: 7%;
+}
+
+.band-name-generator h2 {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.band-name-generator p {
+  font-size: 1rem;
+  margin-right: 35px;
+  margin-bottom: 15px;
+}
+
+#generate-bandname {
+  background: var(--variante);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#generate-bandname:hover {
+  background: var(--variante2);
+}
+
+.bandname-output {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.facts {
+  background: var(--light);
+  text-align: center;
+  border-radius: 8px;
+  min-height: 80px;
+  font-size: 1.3rem;
+  margin-right: 2%;
+  margin-left: 2%;
+  height: 6%;
+}
+
+#next-fact {
+  margin-top: 1rem;
+  background-color: var(--variante);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#next-fact:hover {
+  background-color: var(--variante2);
+}
+
+.sounds {
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ .sounds h2 {
+  margin-right: 40px;
+  font-size: 2.3rem;
+}
+
+.sound-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instrument {
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+}
+
+.instrument img {
+  width: 260px; /* feste Breite für alle Icons */
+  height: 260px;/* feste Höhe für alle Icons */
+  object-fit: cover;/* Bild wird zugeschnitten, nicht verzerrt */
+  border-radius: 8px;/* optional: abgerundete Ecken */
+  transition: transform 0.2s;
+}
+
+.instrument img:hover {
+  transform: scale(1.1);
+}
+
+.instrument figcaption {
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  color: var(--variante);
+  font-weight: bold;
+}
+
+.teaser-slider{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5% 5%;
+  margin-bottom: 20%;
+}
+.sliderocky{
+  text-align: center;
+  background-color: var(--light);
+  border-radius: 10px;
+  padding-bottom: 2%;
+  list-style: none;
+}
+
+.sub-sliderock img {
+  width: 200px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.sliderocky a{
+  margin-top: 0.5rem;
+  background-color: var(--variante);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  padding: 1% 4%;
+  margin-bottom: 2%;
+}
+
+.main-grid footer { grid-area: footer; }
+
+
 /************************************************* INSTRUMENT ***********************************/
 
 
 #UseInstrument {
   display: grid;
   grid-template-areas:
-    "header header"
-    "section section"
-    "aside aside"
-    "article article"
-    "tickets tickets"
-    "footer footer";
-}
+    "header"
+    "intro "
+    "kinder "
+    "article "
+    "tickets "
+    "footer ";
+} 
 
 #UseInstrument header {
   grid-area: header;
@@ -163,7 +403,7 @@ footer .footer-text {
 }
 
 #introduction {
-  grid-area: section;
+  grid-area: intro;
   text-align: center;
   width: 100%;
   font-size: 1.5rem;
@@ -189,9 +429,9 @@ footer .footer-text {
   text-decoration: underline;
 }
 
-aside {
+#One-Section {
   background-color: var(--white);
-  grid-area: aside;
+  grid-area: kinder;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -290,7 +530,7 @@ h2 {
   margin: 0 auto;
   margin-bottom: 15%;
   padding: 1% 2%;
-}
+} 
 
 #Event-Tour h3 {
   color: var(--white);
@@ -360,13 +600,13 @@ h2 {
   cursor: pointer;
   padding: 5px 20px;
   border-radius: 10px;
-}
+} 
 
 /**************************************** MEDIA QUERRIES *******************************************************/
 
 @media (max-width: 450px) {
 
-  #introduction {
+#introduction {
     width: 95%;
     font-size: 1.3rem;
     height: 90%;
@@ -413,6 +653,12 @@ h2 {
   .Gebucht{
     font-size: 1.6rem;
     left: 7%;
+  }
+}
+
+@media (max-width: 560px){
+  .sliderocky{
+    margin-bottom: 8%;
   }
 }
 
@@ -468,15 +714,81 @@ h2 {
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
+  } 
+
+  /***************************** INDEX ***********************************************/
+
+  .page-grid{
+    display: grid;
+    
   }
+
+  .hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    font-size: 1.5rem;
+  }
+
+  .hero-image{
+    width: 60%;
+  }
+
+  .hero-text{
+    width: 100%;
+  }
+
+  .rock-history-slider{
+    margin-bottom: 0;
+    max-height: 90%;
+  }
+
+  .slider-wrapper{
+    max-height: 100%;
+  }
+
+  .sliderock .overlay{
+    bottom: 15%;
+    font-size: 1rem;
+  }
+
+  .band-name-generator{
+    margin-top: 0;
+    height: 90%;
+    margin-bottom: 5%;
+  }
+
+  .band-name-generator h2 {
+    font-size: 3rem;
+  }
+
+  .band-name-generator p{
+    font-size: 2rem;
+  }
+
+  .facts {
+    font-size: 2rem;
+    height: 100%;
+    padding: 2% 0;
+  }
+
+  .teaser-slider{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2%;
+  }
+
+  .sub-sliderock img{
+    height: 200px;
+  }  
 
   /*********************************** MEDIA QUERRY INSTRUMENT.HTML ***********************/
 
   #UseInstrument {
     grid-template-areas:
       "header header"
-      "section section"
-      "aside aside"
+      "intro intro"
+      "kinder kinder"
       "article tickets"
       "footer footer";
   }
@@ -486,7 +798,7 @@ h2 {
   }
 
   #introduction {
-    grid-area: section;
+    grid-area: intro;
     height: 70%;
     width: 75%;
     text-align: center;
@@ -499,10 +811,10 @@ h2 {
     margin-bottom: 10%;
   }
 
-  aside{
+  #One-Section{
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    grid-area: aside;
+    grid-area: kinder;
     margin-left: 6%;
   }
 
@@ -592,5 +904,5 @@ h2 {
 
   #Motivation {
     margin-left: 7%;
-  }
+  } 
 }
