@@ -670,6 +670,13 @@ h1 {
   gap: 5px; /* Abstand zwischen Elementen */
 }
 
+.rockstar-Legends p{
+  color: white; /* Weiße Schrift */
+  font-size: 1.2rem; /* Schriftgröße */
+  text-align: center; /* Zentriert */
+  margin-bottom: 10px; /* Abstand nach unten */
+}
+
 /* Container für Legenden: Zeilenweise, mit Abstand */
 .rockstar-legend-container {
   display: flex; /* Flexbox */
