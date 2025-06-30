@@ -509,13 +509,9 @@ h1 {
   align-items: center; /* Zentriert horizontal */
 }
 
-/* Links im ersten Seitenbereich ohne Unterstreichung */
-.first-page>div a {
-  text-decoration: none; /* Keine Unterstreichung */
-}
-
 /* Button-Stil im ersten Seitenbereich */
-.first-page>div button {
+.btn_1 a {
+  text-decoration: none;
   background-color: hsl(239, 97%, 26%); /* Dunkelblauer Hintergrund */
   color: white; /* Weiße Schrift */
   padding: 20px; /* Innenabstand */
@@ -528,7 +524,7 @@ h1 {
 }
 
 /* Hover-Effekt für Button */
-.first-page>div button:hover {
+.btn_1 a:hover {
   background-color: white; /* Weißer Hintergrund beim Hover */
   color: hsl(239, 97%, 26%); /* Dunkelblauer Text beim Hover */
 }
@@ -613,7 +609,7 @@ h1 {
 }
 
 /* Button im Quiz-Textbereich */
-.rockquiz-page .text button {
+#Rockstar .btn a {
   background-color: hsl(239, 97%, 26%); /* Dunkelblauer Hintergrund */
   color: white; /* Weiße Schrift */
   padding: 20px; /* Innenabstand */
@@ -626,9 +622,11 @@ h1 {
 }
 
 /* Link im Button */
-.rockquiz-page .text button a {
+#Rockstar .btn a {
   color: white; /* Weiße Schrift */
   text-decoration: none; /* Keine Unterstreichung */
+  padding-top: 10px;
+  padding-bottom: 10px ;
 }
 
 /* Navigationsbutton für Slider (links und rechts) */
@@ -945,11 +943,13 @@ h1 {
   }
 }
 
-
-@media (min-width: 1024px) {
-  .teaser {
+@media (min-width: 1025px) {
+.teaser {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+@media (min-width: 962px) {
 
   /*#################################################### Rockstar################################ */
   .Rock-header {
@@ -971,7 +971,7 @@ h1 {
     flex-direction: row;
   }
 
-  .first-page>div button {
+  .btn_1 a {
     padding: 25px;
     font-size: 1.2rem;
   }
@@ -1124,7 +1124,7 @@ h1 {
     padding: 15px;
   }
 
-  .rockquiz-page .text button {
+  #Rockstar .btn a {
     background-color: hsl(239, 97%, 26%);
     color: white;
     padding: 20px;
@@ -1136,9 +1136,11 @@ h1 {
     font-size: 1rem;
   }
 
-  .rockquiz-page .text button a {
+  #Rockstar .btn a {
     color: white;
     text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px ;
   }
 
   .rockstar-Legends {
