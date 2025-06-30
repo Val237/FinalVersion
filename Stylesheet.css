@@ -77,7 +77,6 @@ html,body {
 .nav-links.hidden {
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .nav-links a[aria-current="page"] {
@@ -134,7 +133,7 @@ footer .footer-text {
   text-align: center;
 }
 
-/************************************************ INDEX.HTML*/
+/************************************************ INDEX.HTML*********************************/
 
  .main-grid{
   display: grid;
@@ -200,7 +199,7 @@ footer .footer-text {
   background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
   color:#fff;
   /* padding:1rem; */
-  font-size:0.6rem;
+  font-size:0.8rem;
   bottom: 2%;
   text-align: center;
 }
@@ -999,6 +998,14 @@ input[type="text"] {
   }
 /****************************************MEDIA QUERRY QUIZ HTML *************************************/
    body.quiz-page .quiz-container {
+    width: 40%;
+    padding: 40px;
+    font-size: 1.1rem;
+    margin-top: 3%;
+  }
+
+  /****************************************MEDIA QUERRY QUIZ HTML *************************************/
+    body.quiz-page .quiz-container {
     width: 40%;
     padding: 40px;
     font-size: 1.1rem;

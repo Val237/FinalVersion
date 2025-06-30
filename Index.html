@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="icon" href="Icon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="Rockgeschichte, Rockmusik, Kinder, Instrumente, Quiz, Musik hören, Musik lernen, Rock-Facts">
+  <meta name="description"
+    content="Erkunde die Geschichte des Rock, höre Instrumente und entdecke spannende Fakten und alles auf einer coolen Kinderseite mit Quiz!">
+  <meta name="author" content="Hairsaint">
+
+  <title>Kinder Rockstars, Musik lernen, spielen & Rockstar werden</title>
+
+  <link rel="stylesheet" href="Stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- **************************** OG:GRAPH ************************************************************-->
+  <meta property="og:title" content="Kinder Rockstars, entdecke Rockgeschichte & Musikspaß!" />
+  <meta property="og:description"
+    content="Rockgeschichte, interaktive Rock-Facts, echte Sounds und ein Quiz und alles für Kinder, die Rockmusik entdecken wollen!" />
+  <meta property="og:image" content="img/social-preview.jpg" />
+  <meta property="og:url" content="https://index.html" />
+  <meta property="og:type" content="Webseite" />
+  <meta property="og:locale" content="de_DE" />
+
+
+  <!-- **************************** SCHEMA-MARKUP ************************************************************-->
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Kinder Rockstars",
+  "url": "https://index.html",
+  "logo": "https://index.html/FavIcon.png",
+  "description": "Erkunde die Geschichte des Rock, höre Instrumente und entdecke spannende Fakten und alles auf einer coolen Kinderseite mit Quiz!",
+  "sameAs": [
+    "https://facebook.com",
+    "https://twitter.com",
+    "https://instagram.com",
+    "https://youtube.com",
+    "https://tiktok.com"
+  ]
+}
+</script>
+</head>
+
+<body class="main-grid">
+  <!-- 2. Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <img src="Icon.png" class="Logo" alt="Kinder Rockstars Logo">
+      <ul class="nav-links hidden" id="menu">
+        <li><a href="Index.html" aria-current="page">Home</a></li>
+        <li><a href="Instrumente.html">Instrumente</a></li>
+        <li><a href="Rockstar.html">Rockstar</a></li>
+        <li><a href="Quiz.html">Quizz</a></li>
+      </ul>
+      <i class="fa fa-bars" id="appear"></i>
+    </nav>
+  </header>
+  <main class="page-grid">
+    <!-- Hero-Sektion -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="startseite-bilder/Rock-and-Roll.jpeg" alt="Junger Rockstar mit Gitarre">
+      </div>
+      <div class="hero-text">
+        <h1> 🎸 Willkommen bei RockStar Kids ! 🤘</h1>
+        <p>
+          Du träumst davon, Gitarre zu spielen wie ein echter Rockstar? Du willst
+          auf der Bühne stehen und die Menge toben sehen? Oder einfach wissen, warum
+          Rockmusik so cool ist? Dann bist du hier genau richtig!</p>
+          <p>Also: Lautstärke hochdrehen, Luftgitarre schnappen und los geht’s in die Welt von RockStar Kids!
+          Der Rock wartet auf dich. Bereit, die Bühne zu erobern? 🎶
+        </p>
+      </div>
+    </section>
+
+    <!-- Slider: Geschichte der Rockmusik -->
+    
+      <h2>Geschichte der Rockmusik</h2>
+      <section class="rock-history-slider">
+      <div class="slider-wrapper">
+        <button class="slider-nav prev" id="move-off" aria-label="Vorheriger Abschnitt">&lt;</button>
+        <button class="slider-nav next" id="move-on" aria-label="Nächster Abschnitt">&gt;</button>
+        <div class="slides">
+          <div class="sliderock" data-title="einleitung">
+            <div class="slide-content">
+              <img src="startseite-bilder/1950er.jpg" alt="Rock’n’Roll der 1950er">
+              <div class="overlay">
+                <h3>🎤 Die unglaubliche Geschichte des Rock’n’Roll!</h3>
+                <p>Hey du!
+                  Mach dich bereit für eine Reise durch die magische Welt des Rock!
+                  Ich erzähle dir die Geschichte einer Musik, die Herzen schneller schlagen lässt, Gitarren zum Schreien
+                  bringt
+                  und vielleicht auch bald DICH zur Rockstar macht.
+                  Bereit? Dann: 3… 2… 1… ROCK ON! 🎸⚡
+                </p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="1950er">
+            <div class="slide-content">
+              <img src="startseite-bilder/1950er.jpg" alt="Beat-Ära der 1960er">
+              <div class="overlay">
+                <h3>🎙 1950er Als der Rock erwacht</h3>
+                <p>In den 1950er-Jahren wurde der Rock’n’Roll geboren und zwar mit einem riesigen Wumms! 💥</p>
+                <div>
+                  <p> Er kam aus Amerika und war eine wilde Mischung aus Blues, Country und Rhythm’n’Blues.</p>
+                  <p>👑 Elvis Presley wurde der King er tanzte, sang und brachte die Welt zum Beben!</p>
+                  <p>🎸 Chuck Berry erfand die ersten Gitarrensoli</p>
+                  <p>🎹 Little Richard sprang auf seinem Klavier herum und schrie „Woooo!“</p>
+                  </div>
+                <p>Die Erwachsenen fanden’s zu wild. Die Jugendlichen? Die liebten es natürlich! 😎</p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="1960er">
+            <div class="slide-content">
+              <img src="startseite-bilder/1960er.jpg" alt="Beat-Ära der 1960er">
+              <div class="overlay">
+                <h3> 1960er Rock erobert die Welt</h3>
+                <p>Jetzt wurde der Rock groß richtig groß! In England tauchten neue Bands auf, und die „British
+                  Invasion“ begann.</p>
+                <div>
+                  <p> 🎤 The Beatles brachten Hits, Herz und Harmonie</p>
+                  <p>😈 The Rolling Stones waren wilder, frecher, lauter</p>
+                  <p>🎸 Jimi Hendrix? Der spielte Gitarre mit den Zähnen!</p>
+                  <p>🎤 Janis Joplin, The Doors, The Who alle anders, alle legendär</p>
+                  <p>🌸 Und bei Woodstock, dem berühmtesten Festival aller Zeiten, feierten Tausende mit Musik, Frieden
+                    und Blumen im Haar.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="1970er">
+            <div class="slide-content">
+              <img src="startseite-bilder/1970er.jpg" alt="Classic Rock der 1970er">
+              <div class="overlay">
+                <h3>⚡ 1970er Der Rock wird riesig </h3>
+                <p>Jetzt wird’s laut, richtig LAUT! Der Rock wächst und wächst entstehen viele
+                  neue Stile: Hard Rock, Punk, Glam Rock, Prog Rock… </p>
+                <div>
+                  <p> 🔥 Led Zeppelin bringt die Wände zum Wackeln</p>
+                  <p> 👨 Pink Floyd schickt dich auf eine Reise durchs Weltall </p>
+                  <p> 👑 Queen macht jede Show zum Musical</p>
+                  <p> 🧷 The Ramones schreien einfach „1, 2, 3, 4!“ und fertig ist der Punkrock!</p>
+                  </div>
+                <p> Der Rock hat jetzt tausend Gesichter und jedes davon rockt! </p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="1980er">
+            <div class="slide-content">
+              <img src="startseite-bilder/1980er.jpg" alt="Classic Rock der 1980er">
+              <div class="overlay">
+                <h3>📺 1980er Rock kommt ins Fernsehen </h3>
+                <p>Boom! Jetzt gibt’s MTV der erste Musiksender.</p>
+                <p> Rockmusik wird bunt, schrill und total verrückt!</p>
+                <div>
+                  <p>🎸 Bon Jovi, Guns N’ Roses, AC/DC bringen Gitarren-Sound ohne Ende</p>
+                  <p>💀 Metallica und Iron Maiden machen’s richtig heavy</p>
+                  <p>👨‍🎤 David Bowie, Prince, The Police. Rock wird Kunst und Style</p>
+                  <p>💇‍♀ Riesige Frisuren, enge Hosen, Gitarrensolos in Zeitlupe, das waren die 80s! Und alle haben
+                  mitgerockt.</p>
+                  </div>
+                <p>Der Rock ist jetzt nicht nur Musik, sondern ein Lebensgefühl!</p>
+              </div>
+            </div>
+          </div>
+          <div class="sliderock" data-title="1990er">
+            <div class="slide-content">
+              <img src="startseite-bilder/1990er.jpg" alt="Classic Rock der 1990er">
+              <div class="overlay">
+                <h3>😎 1990er Der Rock wird ernst… und cool</h3>
+                <p>Jetzt wird’s etwas dunkler… aber immer noch richtig stark. </p>
+                <p> Der Rock wird ehrlich, laut, manchmal traurig, aber nie langweilig. </p>
+                <div>
+                  <p>🎸 Nirvana mit Kurt Cobain spricht vielen Jugendlichen aus der Seele</p>
+                  <p>🔥 Red Hot Chili Peppers mixen Funk und Rock</p>
+                  <p> Green Day, Blink-182 bringen den Punk zurück</p>
+                  <p>🩵Oasis, Blur machen Britpop, der aus jedem Song einen Hit macht</p>
+                  <p>Es geht jetzt mehr um Gefühle, Sorgen, Wut aber immer mit fettem Gitarrensound!</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="2000er">
+            <div class="slide-content">
+              <img src="startseite-bilder/2000er.jpg" alt="Classic Rock der 2000er">
+              <div class="overlay">
+                <h3>🌐 2000er Rock goes Internet</h3>
+                <p>Das Internet ist da und plötzlich verändert sich alles!</p>
+                <p>Jetzt kann jede Band ihre Songs ins Netz stellen. Und der Rock? Der wird kreativer denn je.</p>
+                <div>
+                  <p>🎧 Linkin Park mischt Rock mit Rap und Elektronik</p>
+                  <p>🧪 Muse, The White Stripes, Arctic Monkeys machen ihren eigenen Sound</p>
+                  <p>🎤 Paramore, My Chemical Romance bringen Emo-Rock mit Gefühl</p>
+                  <p>🎸 Und Bands wie Coldplay, Foo Fighters zeigen, dass Rock immer noch groß ist.</p>
+                </div>
+                <p>Rock wird bunter, freier, verrückter und für alle zugänglich!</p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="2010er">
+            <div class="slide-content">
+              <img src="startseite-bilder/2010er.jpg" alt="Classic Rock der 1970er">
+              <div class="overlay">
+                <h3>🎧 2010er Rock mischt sich unter die anderen</h3>
+                <p>Pop, Rap und Hip-Hop werden immer größer. Aber der Rock? Der bleibt da nur ein bisschen versteckter.
+                </p>
+                <div>
+                  <p>🔥 Imagine Dragons, Twenty One Pilots bringen neue Sounds mit alten Rock-Wurzeln </p>
+                  <p>🎸 Foo Fighters halten die Rock-Fahne hoch</p>
+                  <p>🎭 My Chemical Romance feiern ein großes Comeback</p>
+                  <p>🎤 Und Bands wie The Killers, Arctic Monkeys zeigen, dass Rock immer noch cool ist.</p>
+                </div>
+                <p>Der Rock ist nicht mehr überall, aber er lebt weiter, in neuen Formen und Sounds.</p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="2020er">
+            <div class="slide-content">
+              <img src="startseite-bilder/2020er.avif" alt="Classic Rock der 1970er">
+              <div class="overlay">
+                <h3>📱 2020er Der Rock kommt zurück</h3>
+                <p>Und plötzlich… ist Rock wieder angesagt! Auf TikTok, YouTube und in Serien taucht er wieder auf.</p>
+                <div>
+                  <p> Måneskin aus Italien gewinnen den ESC und bringen Glam-Rock zurück</p>
+                  <p>🎤 Neue Bands aus der ganzen Welt starten durch ohne Plattenfirma, nur mit ihrem Handy</p>
+                  <p>🎶 Und die Fans? Die sind immer noch da, laut und stolz!<p>
+                  <p>👩‍🎤 Viele coole Mädchen zeigen, dass Rock nicht nur für Jungs ist!</p>
+                  </div>
+                <p>Der Rock ist frech, modern, wild genau wie du.</p>
+              </div>
+            </div>
+        </div>
+          <div class="sliderock" data-title="aktuell">
+            <div class="slide-content">
+              <img src="startseite-bilder/aktuell.jpg" alt="Classic Rock der aktueller Zeit">
+              <div class="overlay">
+                <h3>🌟 Heute Deine Zeit zum Rocken!</h3>
+                <p>So, Du hast jetzt die ganze Geschichte gehört. Von Elvis bis TikTok, von Gitarrensoli bis
+                  Stage-Dives…
+                  Jetzt fehlt nur noch eins:</p>
+                <h4>👉 DU!</h4>
+                <div>
+                  <p> Willst du Gitarre lernen? </p>
+                  <p>Eine Band gründen?</p>
+                  <p>Einen coolen Rock-Namen finden?</p>
+                  <p>Oder einfach wissen, wie du zur Rockstar wirst?</p>
+                  <p>Dann los dein Kapitel in der Geschichte des Rock beginnt JETZT.</p>
+                </div>
+                <h4>🎸 ROCK ON, MINI-ROCKER! 🎤🔥</h4>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Band-Name-Generator -->
+    <section class="band-name-generator">
+      <h2>Generiere deinen Rock-Band-Namen!</h2>
+      <p>Klicke auf den Button, um einen einzigartigen Rock-Band-Namen zu erhalten.</p>
+      <button id="generate-bandname" type="button">Bandnamen generieren 🎸</button>
+      <p id="bandname-output" aria-live="polite" class="bandname-output">
+        Dein Bandname erscheint hier...
+      </p>
+    </section>
+
+    <!-- Rock-Fact-Sektion -->
+    <section class="facts">
+      <h2>Rock-Fact des Tages</h2>
+      <p id="fact-text">Wusstest du, dass die E-Gitarre 1931 erfunden wurde?</p>
+      <button id="next-fact">Nächster Fact</button>
+    </section>
+
+    <!-- Instrumenten-Sound-Sektion -->
+    <section class="sounds">
+      <h2>Hör dir echte Rock-Instrumente an!</h2>
+      <div class="sound-gallery">
+        <figure class="instrument" data-sound="sounds/guitar.mp3">
+          <img src="startseite-bilder/instrument-guitarre.jpg" alt="Gitarre sound" />
+          <figcaption>Gitarre</figcaption>
+        </figure>
+        <figure class="instrument" data-sound="sounds/drums.mp3">
+          <img src="startseite-bilder/schlagzeug.jpg" alt="Schlagzeug sound" />
+          <figcaption>Schlagzeug</figcaption>
+        </figure>
+        <figure class="instrument" data-sound="sounds/piano.mp3">
+          <img src="startseite-bilder/piano.avif" alt="Piano sound" />
+          <figcaption>Piano</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Teaser-Slider -->
+    <section class="teaser-slider">
+          <div class="sliderocky">
+            <article class="sub-sliderock">
+              <h2>Entdecke mehr!</h2>
+              <img src="startseite-bilder/download-removebg-preview (3).png" alt="Instrumente entdecken">
+              <h3>Instrumente lernen</h3>
+              <p>Finde heraus, welches Instrument zu dir passt.</p>
+              <a href="Instrumente.html">Los geht’s!</a>
+            </article>
+        </div>
+          <div class="sliderocky">
+            <article class="sub-sliderock">
+              <h2>Lerne alles über Rocklegenden!</h2>
+              <img src="startseite-bilder/images-removebg-preview.png" alt="Rocklegenden kennenlernen">
+              <h3>Berühmte Rockstars</h3>
+              <p>Triff deine Helden der Rockgeschichte.</p>
+              <a href="Rockstar.html">Jetzt entdecken</a>
+            </article>
+        </div>
+          <div class="sliderocky">
+            <article class="sub-sliderock">
+              <h2>Teste dein Rockwissen!</h2>
+              <img src="startseite-bilder/quiz.png" alt="Quiz spielen">
+              <h3>Quizz</h3>
+              <p>Teste dein Wissen über Rockmusik.</p>
+              <a href="quizz.html">Quizz starten</a>
+            </article>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <div class="fontawesome">
+      <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="mailto:contact@example.com"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <div class="footer-text">
+      <blockquote>"Ich will nicht berühmt sein, ich will ein Rockstar sein.": Freddie Mercury</blockquote>
+      <p><i class="fa-regular fa-copyright"></i>
+        The Rock and Roll Playhouse. All rights reserved. <b>Privacy Policy</b></p>
+    </div>
+  </footer>
+  <script src="Features.js"></script>
+  <script src="Index.js"></script>
+</body>
+</html>
