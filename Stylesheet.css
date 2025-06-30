@@ -449,9 +449,6 @@ h2 {
   justify-content: center; /* Zentriert vertikal */
 }
 
-/* Grid-Bereich für die Rockstar-Legenden */
-
-
 /* Grid-Bereich für das Quiz */
 #Rockstar .rockquiz-page {
   grid-area: quiz; /* Grid-Area "quiz" */
@@ -826,6 +823,9 @@ h1 {
     color: white;
     text-decoration: none;
   }
+  .nav-links.hidden {
+  display: flex;
+}
 
   /*********************************** MEDIA QUERRY INSTRUMENT.HTML ***********************/
 
