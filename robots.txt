@@ -2,9 +2,9 @@
 # Mehr Infos: https://developers.google.com/search/docs/crawling-indexing/robots/intro
 
 User-agent: *
-Disallow:
+Allow: /
 
-# → Alle Crawler dürfen alle Seiten besuchen (kein „Disallow“).
+# → Alle Crawler dürfen alle Seiten besuchen
 
-# Lage der XML-Sitemap (bitte Domain anpassen!)
-Sitemap: https://www.deineseite.de/sitemap.xml
+# Lage der XML-Sitemap
+Sitemap: https://val237.github.io/FinalVersion/Sitemap.xml
