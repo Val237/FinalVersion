@@ -112,7 +112,7 @@ Le site web propose les fonctionnalités principales suivantes :
 
 ### ✍️ Auteurs
 
-- Val237 - *Code initial* - [GitHub](https://github.com/Val237)
+- Val237,Feudjieu,NorellTeumou307 - *Code initial* - [GitHub](https://github.com/Val237)
 
 ---
 
@@ -227,7 +227,7 @@ Die Website bietet folgende Hauptfunktionen:
 
 ### ✍️ Autoren
 
-- Val237 - *Initialer Code* - [GitHub](https://github.com/Val237)
+- Val237,Feudjieu,NorellTeumou307 - *Initialer Code* - [GitHub](https://github.com/Val237)
 
 ---
 
@@ -339,4 +339,4 @@ The website offers the following main features:
 
 ### ✍️ Authors
 
-- Val237 - *Initial code* - [GitHub](https://github.com/Val237)
+- Val237,Feudjieu,NorellTeumou307 - *Initial code* - [GitHub](https://github.com/Val237)
